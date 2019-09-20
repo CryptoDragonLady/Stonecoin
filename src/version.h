@@ -7,6 +7,7 @@
 #ifndef BITCOIN_VERSION_H
 #define BITCOIN_VERSION_H
 
+#include "spork.h"
 /**
  * network protocol versioning
  */
