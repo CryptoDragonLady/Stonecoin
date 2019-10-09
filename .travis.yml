@@ -139,11 +139,11 @@ after_script:
 - if [ -e "/bin/stone-qt.exe" ]; then
   cp /bin/stone* /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST; 
   cp /bin/libbitcoinconsensus-0.dll /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST/; 
-  export CCD=`pwd`
-  cd /home/travis/build/CryptoDragonLady/Stonecoin
+  export CCD=`pwd`;
+  cd /home/travis/build/CryptoDragonLady/Stonecoin;
   tar -czvf /home/travis/build/CryptoDragonLady/Stonecoin/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST;
-  cd $CCD
-  unset $CCD
+  cd $CCD;
+  unset $CCD;
   mv /home/travis/build/CryptoDragonLady/Stonecoin/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/;
   cp /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
   /home/travis/build/CryptoDragonLady/Stonecoin/scripts/relpush.sh /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
@@ -151,11 +151,11 @@ after_script:
   fi
 - if [ -e "./Stone-Core.dmg" ]; then
   cp ./Stone* /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST; 
-  export CCD=`pwd`
-  cd /home/travis/build/CryptoDragonLady/Stonecoin
+  export CCD=`pwd`;
+  cd /home/travis/build/CryptoDragonLady/Stonecoin;
   tar -czvf ./stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST;
-  cd $CCD
-  unset $CCD
+  cd $CCD;
+  unset $CCD;
   mv /home/travis/build/CryptoDragonLady/Stonecoin/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/;
   cp /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
   /home/travis/build/CryptoDragonLady/Stonecoin/scripts/relpush.sh /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
@@ -164,11 +164,11 @@ after_script:
 - if ls /bin/stone* >/dev/null 2>&1; then
   cp /bin/stone* /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST; 
   cp /lib/libbitcoinconsensus* /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST/lib; 
-  export CCD=`pwd`
-  cd /home/travis/build/CryptoDragonLady/Stonecoin
+  export CCD=`pwd`;
+  cd /home/travis/build/CryptoDragonLady/Stonecoin;
   tar -czvf ./stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST;
-  cd $CCD
-  unset $CCD
+  cd $CCD;
+  unset $CCD;
   mv /home/travis/build/CryptoDragonLady/Stonecoin/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/;
   fi
 - if [ -e "/home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM.tar.gz" ]; then 
