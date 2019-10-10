@@ -176,6 +176,13 @@ after_script:
   cp /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM.tar.gz /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
   /home/travis/build/CryptoDragonLady/Stonecoin/scripts/relpush.sh /home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM-$GITCOM.tar.gz;
   ssh -o StrictHostKeyChecking=no stone@88.198.86.0 "/var/www/files.worxcoin.io/htdocs/relmove-s.sh stone-$HOST-$PLATFORM-$GITCOM.tar.gz $GITCOM"; fi
+- find . |grep -s .exe
+- if [ -e "/home/travis/build/CryptoDragonLady/Stonecoin/stonecore-$BVER-win32-setup.exe" ]; then 
+  /home/travis/build/CryptoDragonLady/Stonecoin/scripts/relpush.sh /home/travis/build/CryptoDragonLady/Stonecoin/stonecore-$BVER-win32-setup.exe;
+  ssh -o StrictHostKeyChecking=no stone@88.198.86.0 "/var/www/files.worxcoin.io/htdocs/relmove-s.sh stonecore-$BVER-win32-setup.exe $GITCOM"; fi
+- if [ -e "/home/travis/build/CryptoDragonLady/Stonecoin/stonecore-$BVER-win64-setup.exe" ]; then 
+  /home/travis/build/CryptoDragonLady/Stonecoin/scripts/relpush.sh /home/travis/build/CryptoDragonLady/Stonecoin/stonecore-$BVER-win64-setup.exe;
+  ssh -o StrictHostKeyChecking=no stone@88.198.86.0 "/var/www/files.worxcoin.io/htdocs/relmove-s.sh stonecore-$BVER-win64-setup.exe $GITCOM"; fi
 #- if [ -e "/home/travis/build/CryptoDragonLady/Stonecoin/build/stone-$HOST-$PLATFORM.tar.gz" ]; then 
 #  ssh -o StrictHostKeyChecking=no stone@88.198.86.0 "/var/www/files.worxcoin.io/htdocs/relmove-s.sh stone-$HOST-$PLATFORM.tar.gz $GITCOM"; fi
 #- if [ -e "/home/travis/build/CryptoDragonLady/Stonecoin/build/$HOST.tar.gz" ]; then 
