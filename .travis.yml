@@ -126,6 +126,7 @@ script:
 - if [ "$RUN_TESTS" = "true" ]; then qa/pull-tester/rpc-tests.py --coverage; fi
 - cd ..;
 after_script:
+- export GITCOM=$(git log --format=%h -1)
 - echo $TRAVIS_COMMIT_RANGE
 - echo $TRAVIS_COMMIT_LOG
 #- ls -al $OUTDIR
